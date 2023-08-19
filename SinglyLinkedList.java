@@ -91,6 +91,8 @@ public class SinglyLinkedList<E> {
         if (head != null) {
             if (head.data == e) {
                 removeFirst();
+            } else if (tail.data == e) {
+                removeLast();
             } else {
                 Node c = head;
                 while (c.next != null && c.next.data != e) {
@@ -136,6 +138,7 @@ public class SinglyLinkedList<E> {
         list.insert(2);
 
         Node c = list.head;
+        list.remove(9);
         System.out.println("head: " + c.data);
         System.out.println("tail: " + list.tail.data);
         while (c != null) {
